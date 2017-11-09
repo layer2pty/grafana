@@ -3,7 +3,7 @@
   hosts: test-kitchen
 
   vars:
-    grafana_plugins_install: 
+    grafana_plugins_install:
       - grafana-piechart-panel
       - grafana-worldmap-panel
       - grafana-clock-panel
@@ -21,7 +21,10 @@
     - roles/ansible-grafana/test/plugins-vars.yml
 
   roles:
-    - wunzeco.docker
-    - wunzeco.influxdb
-    - wunzeco.telegraf
+    # - layer2pty.docker
+    # - layer2pty.influxdb
+    # - layer2pty.telegraf
+    - docker
+    - influxdb
+    - telegraf
     - ansible-grafana
